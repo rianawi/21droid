@@ -1,4 +1,4 @@
-package com.smallsteplabs.m21;
+package com.smallsteplabs.twentyonedroid;
 
 import java.util.Map;
 import java.util.HashMap;
@@ -8,7 +8,7 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.view.KeyEvent;
 
-public class Mobile21 extends Activity
+public class TwentyOneDroid extends Activity
 {
     WebView webview;
 
@@ -22,7 +22,7 @@ public class Mobile21 extends Activity
         webview = (WebView) findViewById(R.id.webview);
         webview.getSettings().setJavaScriptEnabled(true);
         webview.loadUrl("http://m.21cineplex.com/");
-        webview.setWebViewClient(new M21WebViewClient());
+        webview.setWebViewClient(new TwentyOneDroidWebViewClient());
     }
 
     @Override
@@ -34,7 +34,7 @@ public class Mobile21 extends Activity
         return super.onKeyDown(keyCode, event);
     }
 
-    private class M21WebViewClient extends WebViewClient {
+    private class TwentyOneDroidWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
             Map extraHeaders = new HashMap();
