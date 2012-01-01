@@ -21,6 +21,7 @@ public class TwentyOneDroid extends Activity
 
         webview = (WebView) findViewById(R.id.webview);
         webview.getSettings().setJavaScriptEnabled(true);
+        webview.setScrollBarStyle(WebView.SCROLLBARS_OUTSIDE_OVERLAY);
         webview.loadUrl("http://m.21cineplex.com/");
         webview.setWebViewClient(new TwentyOneDroidWebViewClient());
     }
